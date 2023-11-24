@@ -20,7 +20,7 @@
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
-    height: 800px; /* Set a fixed height for the container */
+    height: 600px; /* Set a fixed height for the container */
     display: flex;
     flex-direction: column;
   }
@@ -53,7 +53,7 @@
     background-color: #fff;
     color: #333;
     text-align: center;
-    padding: 15px;
+    padding: 5px;
   }
   
   h1 img {
@@ -63,7 +63,7 @@
   }
   
   #categories {
-    padding: 15px;
+    padding: 5px;
   }
   
   #categories p {
@@ -116,16 +116,19 @@
     background-color: #555;
   }
   .scrollable-section {
-    margin-top: 20px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px; /* Adjust as needed */
     padding: 10px;
     border: 1px solid #ccc; /* Optional: Add borders */
-    max-height: 300px; /* Adjust the maximum height as needed */
+    max-height: 450px; /* Adjust the maximum height as needed */
     overflow-y: auto; /* Enable vertical scrollbar */
 }
 
 .scrollable-content {
     max-height: 100%;
 }
+
 
   #answers {
     display: none;
@@ -192,4 +195,40 @@
   .send i {
     font-size: 1.5em;
   }
-  
+  ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px; /* Add border radius */
+}
+
+li:hover {
+    background-color: #333; /* Change to your preferred color */
+}
+
+/* Questions */
+.scrollable-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.scrollable-content li {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.scrollable-content li:hover {
+    background-color: #949494; /* Change to your preferred color */
+}
