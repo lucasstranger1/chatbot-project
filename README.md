@@ -21,6 +21,20 @@ ASD-Q&A Chatbot is a simple chatbot interface that allows users to interact with
 - **Axios:** Axios is used for making asynchronous HTTP requests to fetch data.
 - **CSS:** Custom styling is applied using CSS for a visually appealing interface.
 
+## Backend and API Data Conversion
+
+### Django Backend
+
+The ASD-Q&A Chatbot's backend is built using Django, which serves as the framework handling data management and conversion into API JSON files. 
+
+### Data Conversion into API JSON
+
+The Django backend processes and organizes the provided data into structured formats compatible with the frontend. Through Django's models and views, the application transforms the categorized questions and answers into accessible API endpoints that the frontend can efficiently consume.
+
+For instance, Django models are used to define the data structure, while views handle the logic to serialize this data into JSON format, making it accessible via API endpoints.
+
+These endpoints, when accessed by the frontend, provide the necessary data for category selection, question retrieval, and answer display within the chatbot interface.
+
 ## Getting Started
 
 To run the ASD-Q&A Chatbot locally, follow these steps:
