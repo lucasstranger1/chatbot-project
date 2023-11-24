@@ -3,7 +3,8 @@
 ASD-Q&A Chatbot is a simple chatbot interface that allows users to interact with a question and answer system. The chatbot is designed to provide information based on categories, questions, and answers.
 
 
-![Chatbot Interface](https://github.com/lucasstranger1/chatbot-project/blob/main/Chatbot-interface.png)
+<img src="https://github.com/lucasstranger1/chatbot-project/blob/main/Chatbot-interface.png" alt="Chatbot Interface" width="300" height="600">
+
 
 
 ## Features
