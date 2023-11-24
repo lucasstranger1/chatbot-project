@@ -27,6 +27,7 @@
     }, []);
 
     const handleCategorySelect = async (categoryId) => {
+        console.log('Selected Category ID:', categoryId);
         // Fetch questions based on selected category
         try {
         const response = await axios.get(`http://127.0.0.1:8000/api/v1/questions/?category=${categoryId}`);
@@ -40,6 +41,7 @@
     };
 
     const handleQuestionSelect = async (questionId) => {
+        console.log('Selected Question ID:', questionId);
         // Fetch answers based on selected question
         try {
         const response = await axios.get(`http://127.0.0.1:8000/api/v1/answers/?question=${questionId}`);
@@ -89,25 +91,29 @@
             </ul>
         </div>
         {selectedCategory && (
-            <div>
-            <h2>Questions in {categories.find(cat => cat.id === selectedCategory)?.name}</h2>
-            <ul>
-                {questions.map(question => (
-                <li key={question.id} onClick={() => handleQuestionSelect(question.id)}>
-                    {question.question_text}
-                </li>
-                ))}
-            </ul>
-            </div>
-        )}
-        {selectedQuestion && (
-            <div>
-            <h2>Answers for the selected question</h2>
-            <ul>
-                {answers.map(answer => (
-                <li key={answer.id}>{answer.answer_text}</li>
-                ))}
-            </ul>
+             <div className="scrollable-section">
+             <h2>Questions in {categories.find(cat => cat.id === selectedCategory)?.name}</h2>
+             <div className="scrollable-content">
+                 <ul>
+                     {questions.map(question => (
+                         <li key={question.id} onClick={() => handleQuestionSelect(question.id)}>
+                             {question.question_text}
+                         </li>
+                     ))}
+                 </ul>
+             </div>
+         </div>
+     )}
+                {selectedQuestion && (
+            <div className="scrollable-section">
+                <h2>Answers for the selected question</h2>
+                <div className="scrollable-content">
+                    <ul>
+                        {answers.map(answer => (
+                            <li key={answer.id}>{answer.answer_text}</li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         )}
         <div id='message-section'>
