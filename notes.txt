@@ -1,0 +1,5 @@
+Commandline for running the project:
+
+pipenv shell
+python manage.py runserver 
+npm start

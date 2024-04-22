@@ -1,0 +1,17 @@
+#for a Django project 
+pip install django
+pip install djangorestframework
+pip install django-cors-headers
+python manage.py migrate 
+python manage.py runserver
+asgiref==3.4.1
+Django==3.2.7
+django-cors-headers==3.8.0
+djangorestframework==3.12.4
+pytz==2021.3
+#or a React frontend
+brew install node
+axios==0.24.0
+react==17.0.2
+react-dom==17.0.2
+
